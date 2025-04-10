@@ -11,7 +11,7 @@ public class ShoppingList {
         System.out.println("7. Mustard");
         System.out.println("8. Mayo");
         System.out.println("9. Water");
-        System.out.println("10. Chicken Breast");
+        System.out.println("10. Chicken Breasts");
 
     }
 }
