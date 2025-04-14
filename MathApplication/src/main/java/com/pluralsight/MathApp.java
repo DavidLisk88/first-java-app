@@ -1,5 +1,7 @@
 package com.pluralsight;
 
+import java.util.Random;
+
 public class MathApp {
 
         // This is the main method and where my code will run free
@@ -36,7 +38,8 @@ you want. Print the answer (i.e "The highest salary is ...")
             3. Find and display the area of a circle whose radius is 7.25
              */
             double radius = 7.25;
-            System.out.println(("The area of the circle is " + Math.round(Math.PI * 7.25)));
+            double area = Math.PI * Math.pow(radius, 2);
+            System.out.println("The area of the circle with a radius of " + radius + " is: " + area);
 
             System.out.println("----------------------------------");
 
@@ -51,13 +54,15 @@ you want. Print the answer (i.e "The highest salary is ...")
             /*
             5. Find and display the distance between the points (5, 10) and (85, 50)
              */
-            int five = 5;
-            int ten = 10;
-            int eightyFive = 85;
-            int fifty = 50;
+            int x1 = 5;
+            int y1 = 10;
+            int x2 = 85;
+            int y2 = 50;
 
-            double distance = Math.sqrt(Math.pow(85 - 5, 2) + Math.pow(50 - 10, 2));
+            // Math.sqrt is the square root. Math.pow is the to the power of a number.
+            double distance = Math.sqrt(Math.pow(x2 - x1, 2) + Math.pow(y2 - y1, 2));
             System.out.println("The distance is " + distance);
+
             System.out.println("----------------------------------");
             /*
             6. Find and display the absolute (positive) value of a variable after it is set to -3.8
@@ -65,13 +70,41 @@ you want. Print the answer (i.e "The highest salary is ...")
             double decimal = -3.8;
             double absoluteValue = Math.abs(decimal);
 
-            System.out.println("The absolute value is " + absoluteValue);
+            System.out.println("The absolute value of " + decimal + " is " + absoluteValue);
             System.out.println("----------------------------------");
             /*
             7. Find and display a random number between 0 and 1
              */
-            double between = Math.random();
+            double between = Math.round(Math.random() * 100);
             System.out.println(between);
+
+            // way to find random number between 35 and 250
+            int randomNumber = 35 + (int) (Math.random() * (250 - 35 + 1));
+            System.out.println(randomNumber);
+
+            // way to find random number between 0 and 11
+            Random rand = new Random();
+            int num = rand.nextInt(11);
+
+            System.out.println(num);
+
+        System.out.println("----------------------------------");
+        System.out.println("LESSON 3.3 INTRO TO JAVA:");
+        System.out.println("-----------------\n-----------------");
+
+        // FORMATTING:
+       double dollarAmount = 27.987162;
+       String name = "David";
+       int ten = 10;
+
+       System.out.println(dollarAmount);
+
+       System.out.printf("The dollar amount is $%.2f. %s was here. %s %d", dollarAmount, name, "Pizza", ten);
+
+
+       //SCANNERS
+
+
 
     }
 }
