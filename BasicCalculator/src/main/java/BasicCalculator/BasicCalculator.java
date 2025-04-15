@@ -7,7 +7,7 @@ public class BasicCalculator {
 
         System.out.println("Enter first number: ");
 
-         float num1 = basicCalc.nextFloat();
+        float num1 = basicCalc.nextFloat();
 
         System.out.println("Enter second number: ");
 
